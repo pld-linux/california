@@ -22,11 +22,12 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.592
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	vala >= 2:0.24.0
+BuildRequires:	vala-evolution-data-server >= 3.8.5
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.38.0
 Requires:	evolution-data-server-libs >= 3.8.5
-Requires:	gnome-online-accounts-libs >= 3.8.3
 Requires:	glib2 >= 1:2.38.0
+Requires:	gnome-online-accounts-libs >= 3.8.3
 Requires:	gtk+3 >= 3.12.2
 Requires:	libsoup >= 2.44
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
