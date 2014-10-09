@@ -1,19 +1,19 @@
 Summary:	California - GNOME 3 Calendar
 Summary(pl.UTF-8):	California - kalendarz dla GNOME 3
 Name:		california
-Version:	0.1.2
+Version:	0.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/california/0.1/%{name}-%{version}.tar.xz
-# Source0-md5:	21618d36a6d1926069a1c3dbe416f219
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/california/0.2/%{name}-%{version}.tar.xz
+# Source0-md5:	055d92f2ec324709fb019c352040763c
 URL:		https://wiki.gnome.org/Apps/California
 BuildRequires:	evolution-data-server-devel >= 3.8.5
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.38.0
 BuildRequires:	gnome-online-accounts-devel >= 3.8.3
 BuildRequires:	gobject-introspection-devel >= 1.38.0
-BuildRequires:	gtk+3-devel >= 3.12
+BuildRequires:	gtk+3-devel >= 3.12.2
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libgdata-devel >= 0.14.0
 BuildRequires:	libgee-devel >= 0.10.5
@@ -21,13 +21,13 @@ BuildRequires:	libsoup-devel >= 2.44
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.592
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	vala >= 2:0.22.1
+BuildRequires:	vala >= 2:0.24.0
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.38.0
 Requires:	evolution-data-server-libs >= 3.8.5
 Requires:	gnome-online-accounts-libs >= 3.8.3
 Requires:	glib2 >= 1:2.38.0
-Requires:	gtk+3 >= 3.12
+Requires:	gtk+3 >= 3.12.2
 Requires:	libsoup >= 2.44
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 # packaged as %doc
 %{__rm} -r $RPM_BUILD_ROOT%{_prefix}/doc/california
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -73,5 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README THANKS
 %attr(755,root,root) %{_bindir}/california
 %{_datadir}/appdata/california.appdata.xml
+%{_datadir}/california
 %{_datadir}/glib-2.0/schemas/org.yorba.california.gschema.xml
 %{_desktopdir}/california.desktop
