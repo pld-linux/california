@@ -9,7 +9,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/california/0.2/%{name}-%{version
 # Source0-md5:	055d92f2ec324709fb019c352040763c
 URL:		https://wiki.gnome.org/Apps/California
 BuildRequires:	evolution-data-server-devel >= 3.8.5
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.38.0
 BuildRequires:	gnome-online-accounts-devel >= 3.8.3
 BuildRequires:	gobject-introspection-devel >= 1.38.0
