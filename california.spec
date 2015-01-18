@@ -30,6 +30,7 @@ Requires:	glib2 >= 1:2.38.0
 Requires:	gnome-online-accounts-libs >= 3.8.3
 Requires:	gtk+3 >= 3.12.2
 Requires:	libsoup >= 2.44
+Requires:	xdg-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,7 +46,8 @@ interfejs.
 %setup -q
 
 %build
-%configure
+%configure \
+	XDG_EMAIL=/usr/bin/xdg-email
 
 %{__make}
 
