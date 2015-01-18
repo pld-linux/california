@@ -48,8 +48,9 @@ interfejs.
 %setup -q
 
 %build
-%configure \
-	XDG_EMAIL=/usr/bin/xdg-email
+%configure 
+# cannot pass because it's not equal "yes" (see xdg-utils BR note above)
+#	XDG_EMAIL=/usr/bin/xdg-email
 
 %{__make}
 
