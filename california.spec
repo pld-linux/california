@@ -2,7 +2,7 @@ Summary:	California - GNOME 3 Calendar
 Summary(pl.UTF-8):	California - kalendarz dla GNOME 3
 Name:		california
 Version:	0.3.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/california/0.3/%{name}-%{version}.tar.xz
@@ -27,7 +27,8 @@ BuildRequires:	vala-evolution-data-server >= 3.8.5
 BuildRequires:	xdg-utils
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.38.0
-Requires:	evolution-data-server-libs >= 3.8.5
+# requires e-d-s (not just -libs) to start
+Requires:	evolution-data-server >= 3.8.5
 Requires:	glib2 >= 1:2.38.0
 Requires:	gnome-online-accounts-libs >= 3.8.3
 Requires:	gtk+3 >= 3.12.2
