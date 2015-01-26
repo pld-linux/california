@@ -23,6 +23,7 @@ BuildRequires:	rpmbuild(macros) >= 1.592
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	vala >= 2:0.24.0
 BuildRequires:	vala-evolution-data-server >= 3.8.5
+BuildRequires:	vala-libgee
 # because of broken test XDG_EMAIL passing doesn't suffice
 BuildRequires:	xdg-utils
 BuildRequires:	xz
