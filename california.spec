@@ -2,12 +2,13 @@ Summary:	California - GNOME 3 Calendar
 Summary(pl.UTF-8):	California - kalendarz dla GNOME 3
 Name:		california
 Version:	0.4.0
-Release:	5
+Release:	6
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/california/0.4/%{name}-%{version}.tar.xz
 # Source0-md5:	cd8fa9cc399ee918e55b051e3b9f3124
 Patch0:		evolution-data-server-3.14.patch
+Patch1:		vala.patch
 URL:		https://wiki.gnome.org/Apps/California
 BuildRequires:	evolution-data-server-devel >= 3.8.5
 BuildRequires:	gettext-tools
@@ -50,6 +51,7 @@ interfejs.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure 

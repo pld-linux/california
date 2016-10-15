@@ -1,0 +1,24 @@
+diff -ur california-0.4.0/src/application/california-application.vala california-0.4.0.vala/src/application/california-application.vala
+--- california-0.4.0/src/application/california-application.vala	2015-03-24 00:36:24.000000000 +0100
++++ california-0.4.0.vala/src/application/california-application.vala	2016-10-15 19:56:29.327866569 +0200
+@@ -55,7 +55,7 @@
+         }
+     }
+     
+-    private static const ActionEntry[] action_entries = {
++    private const ActionEntry[] action_entries = {
+         // public actions
+         { ACTION_CALENDAR_MANAGER, on_calendar_manager },
+         { ACTION_HELP, on_help },
+diff -ur california-0.4.0/src/host/host-main-window.vala california-0.4.0.vala/src/host/host-main-window.vala
+--- california-0.4.0/src/host/host-main-window.vala	2015-03-24 00:36:24.000000000 +0100
++++ california-0.4.0.vala/src/host/host-main-window.vala	2016-10-15 19:56:51.822151619 +0200
+@@ -71,7 +71,7 @@
+     private const string ACTION_RESET_FONT = "reset-font";
+     private const string ACCEL_RESET_FONT = "KP_Multiply";
+     
+-    private static const ActionEntry[] action_entries = {
++    private const ActionEntry[] action_entries = {
+         { ACTION_QUICK_CREATE_EVENT, on_quick_create_event },
+         { ACTION_JUMP_TO_TODAY, on_jump_to_today },
+         { ACTION_NEXT, on_next },
